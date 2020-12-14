@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture/constants.dart';
-import 'package:furniture/screens/product/product_screen.dart';
+import 'package:furniture/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -13,14 +13,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Furniture app',
+      title: 'Furniture App',
       theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
-        primaryColor: kPrimaryColor,
-        accentColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+        textTheme:
+            GoogleFonts.dmSansTextTheme().apply(displayColor: kTextColor),
+        appBarTheme: AppBarTheme(
+          color: Colors.transparent,
+          elevation: 0,
+          brightness: Brightness.light,
+        ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ProductsScreen(),
+      home: HomeScreen(),
     );
   }
 }
