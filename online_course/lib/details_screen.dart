@@ -25,7 +25,12 @@ class DetailsScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      SvgPicture.asset("assets/icons/arrow-left.svg"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: SvgPicture.asset("assets/icons/arrow-left.svg"),
+                      ),
                       SvgPicture.asset("assets/icons/more-vertical.svg"),
                     ],
                   ),

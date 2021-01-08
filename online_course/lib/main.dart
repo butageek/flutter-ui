@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Online Course',
       theme: ThemeData(),
       home: HomeScreen(),
@@ -82,30 +83,40 @@ class HomeScreen extends StatelessWidget {
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
                 itemBuilder: (context, index) {
-                  return Container(
-                    padding: EdgeInsets.all(20),
-                    height: index.isEven ? 200 : 240,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      image: DecorationImage(
-                        image: AssetImage(categories[index].image),
-                        fit: BoxFit.fill,
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailsScreen(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      height: index.isEven ? 200 : 240,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        image: DecorationImage(
+                          image: AssetImage(categories[index].image),
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          categories[index].name,
-                          style: kTitleTextStyle,
-                        ),
-                        Text(
-                          '${categories[index].numOfCourses} Courses',
-                          style: TextStyle(
-                            color: kTextColor.withOpacity(.5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            categories[index].name,
+                            style: kTitleTextStyle,
                           ),
-                        ),
-                      ],
+                          Text(
+                            '${categories[index].numOfCourses} Courses',
+                            style: TextStyle(
+                              color: kTextColor.withOpacity(.5),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
