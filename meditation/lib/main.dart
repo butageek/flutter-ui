@@ -37,11 +37,12 @@ class HomeScreen extends StatelessWidget {
           Container(
             height: size.height * .45,
             decoration: BoxDecoration(
-                color: Color(0xFFF5CEB8),
-                image: DecorationImage(
-                  alignment: Alignment.centerLeft,
-                  image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
-                )),
+              color: Color(0xFFF5CEB8),
+              image: DecorationImage(
+                alignment: Alignment.centerLeft,
+                image: AssetImage("assets/images/undraw_pilates_gpdb.png"),
+              ),
+            ),
           ),
           SafeArea(
             child: Padding(
