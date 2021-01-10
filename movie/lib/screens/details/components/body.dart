@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
         children: [
           BackdropAndRating(size: size, movie: movie),
           SizedBox(height: kDefaultPadding / 2),
-          TitleDurationAndFabBtn(movie: movie),
+          TitleDurationAndFavBtn(movie: movie),
           Genres(movie: movie),
           Padding(
             padding: EdgeInsets.symmetric(

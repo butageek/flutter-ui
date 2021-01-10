@@ -70,7 +70,7 @@ class BackdropAndRating extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            TextSpan(text: "10\n"),
+                            TextSpan(text: "/10\n"),
                             TextSpan(
                               text: "150,212",
                               style: TextStyle(
