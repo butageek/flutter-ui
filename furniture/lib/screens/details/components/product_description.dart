@@ -31,7 +31,7 @@ class ProductDescription extends StatelessWidget {
         ),
       ),
       child: SafeArea(
-              child: Column(
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -71,7 +71,7 @@ class ProductDescription extends StatelessWidget {
             )
           ],
         ),
-      )),
+      ),
     );
   }
 }

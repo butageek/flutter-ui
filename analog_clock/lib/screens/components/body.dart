@@ -1,9 +1,7 @@
 import 'package:analog_clock/screens/components/clock.dart';
 import 'package:analog_clock/screens/components/country_card.dart';
 import 'package:analog_clock/screens/components/time_in_hour_and_minute.dart';
-import 'package:analog_clock/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   @override
